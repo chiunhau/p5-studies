@@ -1,0 +1,10 @@
+{
+  "name": "p5-gallery",
+  "projects": [
+    "kinetic",
+    "kinetic2",
+    "kinetic3",
+    "kinetic4",
+    "kinetic5"
+  ]
+}
