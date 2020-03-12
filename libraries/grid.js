@@ -1,5 +1,5 @@
 class Grid {
-	constructor({col, row, size}) {
+	constructor({col = 10, row = 10, size = 50}) {
 		this.col = col
 		this.row = row
 		this.size = size
