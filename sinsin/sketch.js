@@ -6,7 +6,7 @@ function setup() {
 	loadPixels()
 	render(2000)
 
-	save(`${random(100)}.png`)
+	// save(`${random(100)}.png`)
 }
 
 function draw() {
@@ -16,9 +16,10 @@ function draw() {
 function scaling(x, y, t = 0) {
 	// return map(Math.sin(y * 0.1 + Math.sin(x * 0.05 + Math.sin(x * 0.01 + y * 0.01)) * 10), -1, 1, 0, 255)
 	// return map(Math.sin(y * 0.05 + Math.sin(x * 0.02) * 5), -1, 1, 0, 255)
-	const original = createVector(x * 2, y)
- 	const transformed = original.rotate(PI / 4).mult(0.2)
-	return Math.sin(transformed.y * 0.5 + Math.sin(transformed.x * 0.02 + transformed.y  * map(Math.sin(t * 0.01), -1, 1, -0.05, 0.05)) * 10)
+	const original = createVector(x, y)
+ 	const transformed = original.rotate(PI / 4).mult(1)
+	// return Math.sin(transformed.y * 0.5 + Math.sin(transformed.x * 0.02 + transformed.y  * map(Math.sin(t * 0.01), -1, 1, -0.05, 0.05)) * 10)
+	return Math.sin(transformed.y * 0.5)
 }
 
 function binary(scaled) {
